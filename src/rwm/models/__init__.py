@@ -1,4 +1,27 @@
-"""Нейросетевые компоненты world models: энкодеры, латентная динамика, головы.
+"""Нейросетевые компоненты, общие для всех алгоритмов: см. rwm.models.nets."""
 
-Заполняется в фазах 3–4 (см. docs/03_roadmap.md).
-"""
+from rwm.models.nets import (
+    CNNDecoder,
+    CNNEncoder,
+    RunningScale,
+    SimNorm,
+    TanhGaussian,
+    TwoHot,
+    mlp,
+    soft_update,
+    symexp,
+    symlog,
+)
+
+__all__ = [
+    "CNNDecoder",
+    "CNNEncoder",
+    "RunningScale",
+    "SimNorm",
+    "TanhGaussian",
+    "TwoHot",
+    "mlp",
+    "soft_update",
+    "symexp",
+    "symlog",
+]

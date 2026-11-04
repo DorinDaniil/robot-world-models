@@ -42,7 +42,7 @@ def test_exp_se3_pure_rotation_keeps_axis_point():
 
 
 def test_closed_form_matches_poe():
-    """Замкнутая форма из docs/06_arm_geometry.md: p = (ρ cos θ1, ρ sin θ1, z),
+    """Замкнутая форма из L3 §3.3: p = (ρ cos θ1, ρ sin θ1, z),
     ρ = l2 sin φ2 + l3 sin φ3 + l45 sin φ4, z = h2 + l2 cos φ2 + l3 cos φ3 + l45 cos φ4,
     φk = θ2 + … + θk; R = Rz(θ1) Ry(φ4) Rz(θ5)."""
     chain = arm5_chain()

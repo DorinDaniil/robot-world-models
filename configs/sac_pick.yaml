@@ -1,0 +1,30 @@
+# SAC на PickEnv (вектор состояния). Базовая линия для TD-MPC2 и Dreamer.
+seed: 0
+algo: sac
+
+env:
+  id: rwm/Pick-v0
+  kwargs:
+    obs_mode: state
+
+train:
+  total_steps: 1000000
+  seed_steps: 10000
+  utd: 1
+  buffer_size: 1000000
+  log_every: 2000
+  eval_every: 10000
+  eval_episodes: 10
+  device: auto
+
+agent:
+  hidden: 256
+  gamma: 0.99
+  lr: 3.0e-4
+  tau: 0.005
+  batch_size: 256
+
+log:
+  dir: runs
+  name: sac_pick
+  tensorboard: false

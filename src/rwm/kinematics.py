@@ -181,7 +181,7 @@ def screw_axes_from_mujoco(model, data, joint_names: list[str], site: str) -> Se
 
 # --------------------------------------------------------------------------- arm5 аналитически
 def arm5_chain() -> SerialChain:
-    """Винтовые оси и домашняя поза arm5 (см. assets/arm5.xml, docs/06_arm_geometry.md).
+    """Винтовые оси и домашняя поза arm5 (см. assets/arm5.xml, docs/lectures/L3_kinematics_screw_theory.md).
 
     Высоты осей: h1 = 0.06, h2 = 0.12, h3 = 0.32, h4 = 0.50, h5 = 0.56; ee при θ = 0 — 0.635.
     """

@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "rwm"
 version = "0.1.0"
-description = "Learning to control a robot arm with world models, from scratch"
+description = "Course and code: learning to control a robot arm with world models, from scratch"
 requires-python = ">=3.10"
 license = "MIT"
 dependencies = [
@@ -20,6 +20,8 @@ dependencies = [
 [project.optional-dependencies]
 # PyTorch ставится отдельно: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 train = ["tensorboard", "wandb"]
+plot = ["matplotlib"]
+voice = ["faster-whisper", "sounddevice"]
 dev = ["pytest", "ruff"]
 
 [tool.setuptools.packages.find]

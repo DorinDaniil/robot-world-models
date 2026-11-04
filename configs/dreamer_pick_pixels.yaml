@@ -1,0 +1,45 @@
+# Dreamer (RSSM) на PickEnv по пикселям 64×64. Выполняется на сервере.
+seed: 0
+algo: dreamer
+
+env:
+  id: rwm/Pick-v0
+  kwargs:
+    obs_mode: pixels
+    image_size: 64
+
+train:
+  total_steps: 1000000
+  seed_steps: 10000
+  utd: 1
+  buffer_size: 200000        # 64×64×3 uint8 ≈ 2.5 ГБ
+  log_every: 2000
+  eval_every: 10000
+  eval_episodes: 10
+  device: auto
+
+agent:
+  deter: 512
+  hidden: 512
+  stoch: 32
+  classes: 32
+  depth: 32
+  batch_size: 16
+  seq_len: 64
+  horizon: 15
+  gamma: 0.997
+  lam: 0.95
+  beta_dyn: 0.5
+  beta_rep: 0.1
+  free_bits: 1.0
+  entropy_coef: 3.0e-4
+  lr_model: 1.0e-4
+  lr_actor: 3.0e-5
+  lr_critic: 3.0e-5
+  critic_tau: 0.02
+  update_every: 2
+
+log:
+  dir: runs
+  name: dreamer_pick_pixels
+  tensorboard: false

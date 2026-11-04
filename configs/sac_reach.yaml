@@ -1,0 +1,30 @@
+# SAC на ReachEnv (вектор состояния). Лаб. 2. Ожидание: доля успехов > 0.9 к 1e5 шагов.
+seed: 0
+algo: sac
+
+env:
+  id: rwm/Reach-v0
+  kwargs:
+    obs_mode: state
+
+train:
+  total_steps: 100000
+  seed_steps: 5000
+  utd: 1
+  buffer_size: 1000000
+  log_every: 1000
+  eval_every: 5000
+  eval_episodes: 10
+  device: auto
+
+agent:
+  hidden: 256
+  gamma: 0.99
+  lr: 3.0e-4
+  tau: 0.005
+  batch_size: 256
+
+log:
+  dir: runs
+  name: sac_reach
+  tensorboard: false
