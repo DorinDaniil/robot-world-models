@@ -1,0 +1,18 @@
+# Базовый конфиг задачи Reach. Алгоритмические секции добавляются по мере фаз.
+seed: 0
+
+env:
+  id: rwm/Reach-v0
+  obs_mode: state        # state | pixels
+  max_steps: 100
+  frame_skip: 10
+  action_scale: 0.15
+  success_radius: 0.05
+  image_size: 64
+
+eval:
+  episodes: 10
+  every_steps: 5000
+
+log:
+  dir: runs

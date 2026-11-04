@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rwm"
+version = "0.1.0"
+description = "Learning to control a robot arm with world models, from scratch"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "mujoco>=3.2",
+    "gymnasium>=1.0",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+    "tqdm",
+    "imageio",
+]
+
+[project.optional-dependencies]
+# PyTorch ставится отдельно: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+train = ["tensorboard", "wandb"]
+dev = ["pytest", "ruff"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
