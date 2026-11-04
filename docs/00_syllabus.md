@@ -41,7 +41,9 @@
 | 4. Планирование | L4. MPPI, TD-MPC2 | Лаб. 3: TD-MPC2 |
 | 5. Перенос | L5. Обучение по демонстрациям, sim2real | Лаб. 5–6 |
 
-Лекции: `docs/lectures/L1_mdp_and_rl.md` … `L5_imitation_and_sim2real.md`.
+Лекции: `docs/lectures/L1_mdp_and_rl.md` … `L5_imitation_and_sim2real.md`. К лекции 2
+прилагается разбор конкретного манипулятора: `docs/06_arm_geometry.md` (винтовые оси,
+прямая и обратная кинематика, якобиан, захват, динамика).
 
 ## Требования к отчётности
 

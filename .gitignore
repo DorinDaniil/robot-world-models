@@ -227,3 +227,4 @@ wandb/
 *.mp4
 assets/mujoco_menagerie/
 .ruff_cache/
+mjmodel.xml
